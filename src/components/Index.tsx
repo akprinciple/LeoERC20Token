@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
-import Connected from './Connected';
-import NotConnected from './NotConnected';
-import useHooks from '../Hooks/useHooks';
+
 import Header from './Header';
 import Faucet from './Faucet';
-import AdminMint from './AdminMint';
+// import AdminMint from './AdminMint';
 
 const Index = () => {
   // Mock states for wallet connection
@@ -26,7 +23,7 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Faucet />
-            <AdminMint />
+            {/* <AdminMint /> */}
           </div>
         </div>
       </section>

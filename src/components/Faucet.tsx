@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import useHooks from '../Hooks/useHooks';
 
 const Faucet = () => {

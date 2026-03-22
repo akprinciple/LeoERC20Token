@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
 import useHooks from '../Hooks/useHooks';
 
 
 
 const NotConnected = () => {
-    const [isConnected, setIsConnected] = useState(false);
-    const [walletAddress, setWalletAddress] = useState('');
+    
     const {handleConnect} = useHooks();
 
   return (

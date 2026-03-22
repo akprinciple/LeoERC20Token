@@ -3,7 +3,6 @@ import { useTokenContract } from "../useContract";
 import { useCallback, useState } from "react";
 import { ErrorDecoder } from "ethers-decode-error";
 import { toast } from "react-toastify";
-import { ethers } from "ethers";
 const errorDecoder = ErrorDecoder.create();
 
 

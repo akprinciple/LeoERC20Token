@@ -1,17 +1,15 @@
-import React from 'react'
 import useHooks from '../Hooks/useHooks'
-import { useReadToken } from '../Hooks/specific/useReadToken';
 
 
 
 const Connected = () => {
-  const {walletAddress, balance, settoAddress, settransferAmount, makeTransfer} = useHooks();
+  const {balance, settoAddress, settransferAmount, makeTransfer} = useHooks();
 
   return (
     <div className="space-y-6">
                 <div className="p-4 bg-[#F7FBF9] rounded-2xl border border-emerald-100">
                   <p className="text-sm text-gray-500 mb-1 font-medium">Connected Account</p>
-                  <p className="font-mono text-emerald-900 font-semibold">{walletAddress}</p>
+                  <p className="font-mono text-emerald-900 font-semibold"></p>
                 </div>
                 
                 <div className="p-6 bg-emerald-600 rounded-2xl text-white shadow-md bg-gradient-to-br from-emerald-600 to-emerald-800">

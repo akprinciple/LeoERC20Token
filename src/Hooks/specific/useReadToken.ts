@@ -1,7 +1,6 @@
 import { useAppKitAccount } from "@reown/appkit/react";
 import { useTokenContract } from "../useContract";
 import { useCallback, useState } from "react";
-import { toast } from "react-toastify";
 
 
 export const useReadToken = () => {

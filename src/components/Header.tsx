@@ -1,12 +1,10 @@
-import React from 'react'
-import { useAppKit, useAppKitAccount } from "@reown/appkit/react";
 import useHooks from '../Hooks/useHooks'
 import Connected from './Connected'
 import NotConnected from './NotConnected'
 import { formatAddress } from '../util';
 
 const Header = () => {
-const {isConnected, handleConnect, address, name, symbol, totalSupply, maxSupply} = useHooks()
+const {handleConnect, address, name, symbol, totalSupply, maxSupply} = useHooks()
  
  
   
