@@ -5,7 +5,9 @@ import { liskSepolia as rawLisk, type AppKitNetwork } from "@reown/appkit/networ
 
 
 // 1. Get projectId
-const projectId = import.meta.env.VITE_APPKIT_PROJECT_ID;
+const projectId = "b2ed0618c2957378a2b5809677587e8d";
+
+// const projectId = import.meta.env.VITE_APPKIT_PROJECT_ID;
 
 export const liskTestnet:AppKitNetwork = {
   ...rawLisk,

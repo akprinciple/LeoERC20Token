@@ -11,13 +11,15 @@ export const useTokenContract = (withSigner = false) => {
     if (withSigner) {
       if (!signer) return null;
       return new Contract(
-        getAddress(import.meta.env.VITE_TOKEN_CONTRACT_ADDRESS),
+        getAddress("0xDcEb2FbD4e54A5c40952d0965c38B2e8fDAdf202"),
+        // getAddress(import.meta.env.VITE_TOKEN_CONTRACT_ADDRESS),
         TOKEN_FAUCET_ABI,
         signer
       );
     }
     return new Contract(
-      getAddress(import.meta.env.VITE_TOKEN_CONTRACT_ADDRESS),
+      getAddress("0xDcEb2FbD4e54A5c40952d0965c38B2e8fDAdf202"),
+      // getAddress(import.meta.env.VITE_TOKEN_CONTRACT_ADDRESS),
       TOKEN_FAUCET_ABI,
       readOnlyProvider
     );
