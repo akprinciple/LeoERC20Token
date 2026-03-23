@@ -18,7 +18,7 @@ const useHooks = () => {
   };
   const {readBalance, balance, getName, name, getSymbol, symbol, 
     getTotalSupply, totalSupply, getMaxSupply, maxSupply} = useReadToken();
-    const {Transfer, ClaimFaucet} = useWriteToken();
+    const {Transfer, ClaimFaucet, Mint} = useWriteToken();
   useEffect(() => {
      readBalance();
      getName();
@@ -43,9 +43,17 @@ const useHooks = () => {
     readBalance();
   }, [ClaimFaucet, readBalance]);
 
+  const makeMint = useCallback(async (amount: number) => {
+    const checkMint = await Mint(amount);
+    if (!checkMint) return;
+    toast.success("Minting was successful");
+    readBalance();
+    getTotalSupply();
+  }, [Mint, readBalance, getTotalSupply]);
+
   return { isConnected, handleConnect, open, 
     address, readBalance, balance, getName, name, symbol, getTotalSupply, 
-    totalSupply, maxSupply, settoAddress, settransferAmount, makeTransfer, makeClaim};
+    totalSupply, maxSupply, settoAddress, settransferAmount, makeTransfer, makeClaim, makeMint};
 }
 
 

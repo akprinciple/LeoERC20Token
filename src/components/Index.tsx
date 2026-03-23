@@ -1,7 +1,7 @@
 
 import Header from './Header';
 import Faucet from './Faucet';
-// import AdminMint from './AdminMint';
+import AdminMint from './AdminMint';
 
 const Index = () => {
   // Mock states for wallet connection
@@ -23,7 +23,10 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Faucet />
-            {/* <AdminMint /> */}
+            <AdminMint />
+            {/* {address?.toLowerCase() === "0x3D8769805ebb07ABF9983a6254652dBB853A2E88".toLowerCase() && (
+              <AdminMint />
+            )} */}
           </div>
         </div>
       </section>
